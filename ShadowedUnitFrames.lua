@@ -5,7 +5,7 @@
 ShadowUF = select(2, ...)
 
 local L = ShadowUF.L
-ShadowUF.dbRevision = 62
+ShadowUF.dbRevision = 63
 ShadowUF.playerUnit = "player"
 ShadowUF.enabledUnits = {}
 ShadowUF.modules = {}
@@ -184,6 +184,7 @@ function ShadowUF:CheckUpgrade()
 		local config = self.db.profile.units
 		config.player.priestBar = {enabled = true, background = true, height = 0.40, order = 70}
 		config.player.shamanBar = {enabled = true, background = true, height = 0.40, order = 70}
+		config.player.paladinBar = {enabled = true, background = true, height = 0.40, order = 70}
 		config.player.arcaneCharges = {enabled = true, anchorTo = "$parent", order = 60, height = 0.40, anchorPoint = "BR", x = -8, y = 6, size = 12, spacing = -2, growth = "LEFT", isBar = true, showAlways = true}
 
 		-- clean out old bars
@@ -352,6 +353,7 @@ function ShadowUF:LoadUnitDefaults()
 	self.defaults.profile.units.player.druidBar = {enabled = false}
 	self.defaults.profile.units.player.priestBar = {enabled = true}
 	self.defaults.profile.units.player.shamanBar = {enabled = true}
+	self.defaults.profile.units.player.paladinBar = {enabled = true}
 	self.defaults.profile.units.player.xpBar = {enabled = false}
 	self.defaults.profile.units.player.fader = {enabled = false}
 	self.defaults.profile.units.player.soulShards = {enabled = true, isBar = true}
